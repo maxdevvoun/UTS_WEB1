@@ -58,7 +58,7 @@ Project ini mengimplementasikan REST API untuk mengelola data paket wisata, kate
 
 Pengujian pengambilan CSRF Token dan login administrator.
 
-![CSRF Token](Tripora/screenshots/postman/GET_CSRF TOKEN.jpeg)
+![CSRF Token](Tripora/screenshots/postman/GET_CSRF_TOKEN.jpeg)
 
 ![Admin Login](Tripora/screenshots/postman/POST_LOGIN.jpeg)
 

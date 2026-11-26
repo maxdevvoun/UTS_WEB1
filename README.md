@@ -23,25 +23,25 @@ Tampilan halaman utama website Tripora.
 
 Halaman informasi detail paket wisata yang dipilih.
 
-![Detail Package](Tripora/screenshots/website/02-detail-package.png)
+![Detail Package](Tripora/screenshots/website/DETAIL_PACKAGES.jpeg)
 
 **3. Login**
 
 Halaman autentikasi pengguna.
 
-![Login](Tripora/screenshots/website/03-login.png)
+![Login](Tripora/screenshots/website/LOGINPAGE.jpeg)
 
 **4. Register**
 
 Halaman pendaftaran akun pengguna baru.
 
-![Register](Tripora/screenshots/website/04-register.png)
+![Register](Tripora/screenshots/website/REGISTERPAGE.jpeg)
 
 **5. Dashboard**
 
 Halaman utama setelah pengguna berhasil login.
 
-![Dashboard](Tripora/screenshots/website/05-dashboard.png)
+![Dashboard](Tripora/screenshots/website/DASHBOARDPAGE.jpeg)
 
 ---
 
@@ -58,9 +58,9 @@ Project ini mengimplementasikan REST API untuk mengelola data paket wisata, kate
 
 Pengujian pengambilan CSRF Token dan login administrator.
 
-![CSRF Token](Tripora/screenshots/postman/01-csrf-token.png)
+![CSRF Token](Tripora/screenshots/postman/GET_CSRFTOKEN.jpeg)
 
-![Admin Login](Tripora/screenshots/postman/02-admin-login.png)
+![Admin Login](Tripora/screenshots/postman/POST_LOGIN.jpeg)
 
 **2. CRUD Packages**
 
@@ -68,17 +68,17 @@ Pengujian pengambilan, penambahan, perubahan, dan penghapusan data paket wisata.
 
 | Pengujian | Dokumentasi |
 |---|---|
-| GET Packages | ![GET](Tripora/screenshots/postman/03-get-packages.png) |
-| POST Create Package | ![POST](Tripora/screenshots/postman/04-create-package.png) |
-| PUT Update Package | ![PUT](Tripora/screenshots/postman/05-update-package.png) |
-| DELETE Package | ![DELETE](Tripora/screenshots/postman/06-delete-package.png) |
-| GET After Delete | ![GET After Delete](Tripora/screenshots/postman/07-get-after-delete.png) |
+| GET Packages | ![GET](Tripora/screenshots/postman/GET_PACKAGES.jpeg) |
+| POST Create Package | ![POST](Tripora/screenshots/postman/POST_PACKAGES.jpeg) |
+| PUT Update Package | ![PUT](Tripora/screenshots/postman/PUT_PACKAGES.jpeg) |
+| DELETE Package | ![DELETE](Tripora/screenshots/postman/DELETE_PACKAGES.jpeg) |
+|
 
 **3. CRUD Categories**
 
 Pengujian pengambilan dan pengelolaan data kategori wisata.
 
-![GET Categories](Tripora/screenshots/postman/08-get-categories.png)
+![GET Categories](Tripora/screenshots/postman/GET_CATEGORIES.jpeg)
 
 *Dokumentasi POST, PUT, dan DELETE Categories dapat ditambahkan setelah pengujian selesai.*
 
@@ -92,9 +92,9 @@ Dokumentasi pengujian pengelolaan data destinasi wisata.
 
 ## IDENTITAS MAHASISWA
 
-- **Nama:** [Nama Mahasiswa]
-- **NPM:** [NPM]
-- **Kelas:** [Kelas]
+- **Nama:** Max Devon
+- **NPM:** 24552011094
+- **Kelas:** TIF RP 24B CID
 - **Program Studi:** Teknik Informatika
 - **Universitas:** Universitas Teknologi Bandung
 

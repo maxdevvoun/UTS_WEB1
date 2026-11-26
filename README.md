@@ -17,7 +17,7 @@ Tripora merupakan website Travel & Tourism yang menyediakan informasi paket wisa
 
 Tampilan halaman utama website Tripora.
 
-![Homepage](Tripora/screenshots/website/01-homepage.png)
+![Homepage](Tripora/screenshots/website/HOMEPAGE.JPEG)
 
 **2. Detail Paket Wisata**
 

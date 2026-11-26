@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{base_url}}/api/index.php/categories"
+method: POST
+headers:
+  Content-Type: application/json
+  X-CSRF-Token: "{{csrf_token}}"
+body:
+  type: text
+  content: |-
+    {
+      "category_name": "Postman Test Category",
+      "description": "Temporary category created from Postman.",
+      "image_url": ""
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      const json = pm.response.json();
+      pm.test('Category created', () => pm.expect(json.success).to.eql(true));
+      if (json.data && json.data.category_id) pm.collectionVariables.set('category_id', String(json.data.category_id));
+    language: text/javascript
+order: 1000

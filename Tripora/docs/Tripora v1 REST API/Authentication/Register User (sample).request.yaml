@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{base_url}}/api/index.php/auth/register"
+method: POST
+headers:
+  Content-Type: application/json
+  X-CSRF-Token: "{{csrf_token}}"
+body:
+  type: text
+  content: |-
+    {
+      "full_name": "Tripora Member",
+      "email": "member@example.test",
+      "phone": "081234567890",
+      "password": "MemberTripora123"
+    }
+order: 4000

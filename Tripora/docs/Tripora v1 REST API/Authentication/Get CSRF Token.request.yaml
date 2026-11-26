@@ -1,0 +1,11 @@
+$kind: http-request
+url: "http://localhost/Tripora/api/index.php/auth/csrf"
+method: GET
+scripts:
+  - type: afterResponse
+    code: |-
+      const json = pm.response.json();
+      pm.collectionVariables.set('csrf_token', json.data.csrf_token);
+      pm.test('CSRF token issued', () => pm.expect(json.success).to.eql(true));
+    language: text/javascript
+order: 1000

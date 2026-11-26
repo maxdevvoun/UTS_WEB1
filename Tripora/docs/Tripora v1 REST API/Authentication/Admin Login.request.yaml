@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{base_url}}/api/index.php/auth/login"
+method: POST
+headers:
+  Content-Type: application/json
+  X-CSRF-Token: "{{csrf_token}}"
+body:
+  type: text
+  content: |-
+    {
+      "email": "admin@tripora.local",
+      "password": "TriporaAdmin!2026"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      const json = pm.response.json();
+      pm.test('Admin login successful', () => pm.expect(json.success).to.eql(true));
+      if (json.data && json.data.csrf_token) pm.collectionVariables.set('csrf_token', json.data.csrf_token);
+    language: text/javascript
+order: 2000

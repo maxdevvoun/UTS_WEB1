@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{base_url}}/api/index.php/destinations"
+method: POST
+headers:
+  Content-Type: application/json
+  X-CSRF-Token: "{{csrf_token}}"
+body:
+  type: text
+  content: |-
+    {
+      "destination_name": "Postman Test Destination",
+      "country": "Indonesia",
+      "city": "Bandung",
+      "description": "Temporary destination created from Postman.",
+      "image_url": ""
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      const json = pm.response.json();
+      pm.test('Destination created', () => pm.expect(json.success).to.eql(true));
+      if (json.data && json.data.destination_id) pm.collectionVariables.set('destination_id', String(json.data.destination_id));
+    language: text/javascript
+order: 1000

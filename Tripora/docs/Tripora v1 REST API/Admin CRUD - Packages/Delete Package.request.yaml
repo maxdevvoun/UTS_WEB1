@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{base_url}}/api/index.php/packages/{{package_id}}"
+method: DELETE
+headers:
+  X-CSRF-Token: "{{csrf_token}}"
+order: 3000

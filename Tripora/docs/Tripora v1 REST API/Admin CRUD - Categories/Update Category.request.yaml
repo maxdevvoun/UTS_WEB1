@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{base_url}}/api/index.php/categories/{{category_id}}"
+method: PUT
+headers:
+  Content-Type: application/json
+  X-CSRF-Token: "{{csrf_token}}"
+body:
+  type: text
+  content: |-
+    {
+      "category_name": "Postman Test Category Updated",
+      "description": "Updated from Postman.",
+      "image_url": ""
+    }
+order: 2000

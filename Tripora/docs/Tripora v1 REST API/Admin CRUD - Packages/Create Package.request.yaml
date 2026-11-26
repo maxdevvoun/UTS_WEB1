@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{base_url}}/api/index.php/packages"
+method: POST
+headers:
+  Content-Type: application/json
+  X-CSRF-Token: "{{csrf_token}}"
+body:
+  type: text
+  content: |-
+    {
+      "category_id": 1,
+      "destination_id": 2,
+      "package_name": "Postman Test Package",
+      "description": "Package created from Postman for API testing.",
+      "price": 1750000,
+      "duration": "2 Days 1 Night",
+      "facilities": "Hotel; Local guide; Transport",
+      "itinerary": "Day 1: Arrival\nDay 2: Tour and departure",
+      "image_url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900",
+      "status": "active"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      const json = pm.response.json();
+      pm.test('Package created', () => pm.expect(json.success).to.eql(true));
+      if (json.data && json.data.package_id) pm.collectionVariables.set('package_id', String(json.data.package_id));
+    language: text/javascript
+order: 1000

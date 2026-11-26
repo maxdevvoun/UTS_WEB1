@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{base_url}}/api/index.php/destinations/{{destination_id}}"
+method: PUT
+headers:
+  Content-Type: application/json
+  X-CSRF-Token: "{{csrf_token}}"
+body:
+  type: text
+  content: |-
+    {
+      "destination_name": "Postman Test Destination Updated",
+      "country": "Indonesia",
+      "city": "Bandung",
+      "description": "Updated from Postman.",
+      "image_url": ""
+    }
+order: 2000
